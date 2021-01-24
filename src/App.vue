@@ -1,6 +1,6 @@
 <template>
   <v-app id="inspire">
-    <v-app-bar
+    <!-- <v-app-bar
       app
       color="white"
       flat
@@ -33,6 +33,40 @@
           ></v-text-field>
         </v-responsive>
       </v-container>
+    </v-app-bar> -->
+
+    <v-app-bar
+      app
+      absolute
+      color="#6A76AB"
+      dark
+      dense
+      shrink-on-scroll
+      src="https://cdn.thecrazytourist.com/wp-content/uploads/2018/07/ccimage-shutterstock_694353502.jpg"
+      scroll-target="#scrolling-techniques-4"
+    >
+        <!-- <template v-slot:img="{ props }">
+          <v-img
+            v-bind="props"
+            gradient="to top right, rgba(100,115,201,.7), rgba(25,32,72,.7)"
+          ></v-img>
+        </template>
+
+      <v-app-bar-nav-icon></v-app-bar-nav-icon> -->
+  <v-spacer></v-spacer>
+      <v-toolbar-title>This is a title for my page</v-toolbar-title>
+
+  <v-spacer></v-spacer>
+
+      <template v-slot:extension>
+
+        <v-tabs centered>
+          <v-tab   v-for="item in items"
+            :key="item.title"
+            :to="item.link"
+            text>{{item.title}}</v-tab>
+        </v-tabs>
+      </template>
     </v-app-bar>
 
     <v-main class="grey lighten-3">
