@@ -73,36 +73,36 @@
       <v-container>
         <v-row>
           <v-col cols="2">
-            <v-sheet rounded="lg">
-              <v-list color="transparent">
-                <v-list-item
-                  v-for="link in sublinks"
-                  :key="link.title"
-                  :to="link.link"
-                  link
-                >
-                  <v-list-item-content>
-                    <v-list-item-title>
-                      {{link.title}}
-                    </v-list-item-title>
-                  </v-list-item-content>
-                </v-list-item>
+          <v-sheet rounded="lg">
+            <v-list color="transparent">
+              <v-list-item
+                v-for="link in sublinks"
+                :key="link.title"
+                :to="link.link"
+                link
+              >
+                <v-list-item-content>
+                  <v-list-item-title>
+                    {{link.title}}
+                  </v-list-item-title>
+                </v-list-item-content>
+              </v-list-item>
 
-                <v-divider class="my-2"></v-divider>
+              <v-divider class="my-2"></v-divider>
 
-                <v-list-item
-                  link
-                  color="black"
-                >
-                  <v-list-item-content>
-                    <v-list-item-title>
-                      Refresh
-                    </v-list-item-title>
-                  </v-list-item-content>
-                </v-list-item>
-              </v-list>
-            </v-sheet>
-          </v-col>
+              <v-list-item
+                link
+                color="grey lighten-4"
+              >
+                <v-list-item-content>
+                  <v-list-item-title>
+                    Refresh
+                  </v-list-item-title>
+                </v-list-item-content>
+              </v-list-item>
+            </v-list>
+          </v-sheet>
+        </v-col>
 
           <v-col>
             <v-sheet
