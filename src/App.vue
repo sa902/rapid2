@@ -1,39 +1,6 @@
 <template>
   <v-app id="inspire">
-    <!-- <v-app-bar
-      app
-      color="white"
-      flat
-    >
-      <v-container class="py-0 fill-height">
-        <v-avatar
-          class="mr-10"
-          color="purple"
-          size="50"
-        >Logo</v-avatar>
 
-        <v-btn
-          v-for="item in items"
-          :key="item.title"
-          :to="item.link"
-          text
-        >
-          {{ item.title }}
-        </v-btn>
-
-        <v-spacer></v-spacer>
-
-        <v-responsive max-width="260">
-          <v-text-field
-            dense
-            flat
-            hide-details
-            rounded
-            solo-inverted
-          ></v-text-field>
-        </v-responsive>
-      </v-container>
-    </v-app-bar> -->
 
     <v-app-bar
       app
@@ -115,6 +82,29 @@
         </v-row>
       </v-container>
     </v-main>
+
+
+    <v-footer dark padless>
+   <v-col
+     class="text-center"
+     cols="12"
+   >
+   <v-card-text>
+     <v-btn
+       v-for="icon in icons"
+       :key="icon"
+       class="mx-4 purple--text"
+       icon
+     >
+       <v-icon size="24px">
+         {{ icon }}
+       </v-icon>
+     </v-btn>
+   </v-card-text>
+
+     {{ new Date().getFullYear() }} — <strong>big dick daddy</strong>
+   </v-col>
+ </v-footer>
   </v-app>
 </template>
 
@@ -150,7 +140,13 @@ export default {
      sublinks:[
        { title: 'Intro', icon: 'mdi-format-list-checks' , link:'/pythonLessons/intro'},
        { title: 'Lesson 1', icon: 'mdi-help-box', link:'/pythonLessons/lesson1'},
-     ]
+     ],
+     icons: [
+        'mdi-facebook',
+        'mdi-twitter',
+        'mdi-linkedin',
+        'mdi-instagram',
+      ],
 
 
   }),
