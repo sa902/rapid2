@@ -1,6 +1,6 @@
 <template>
   <div class="">
-      <pdf ref="bitch" src="../pdf/test.pdf"></pdf>
+      <pdf ref="bitch" src="./test.pdf"></pdf>
       <h1>test</h1>
   </div>
 </template>
